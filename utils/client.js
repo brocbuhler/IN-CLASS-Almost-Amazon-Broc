@@ -7,5 +7,5 @@ const client = {
   appId: process.env.APP_APP_ID,
   measurementId: process.env.APP_MEASUREMENT_ID,
 };
-
+console.warn(client);
 export default client;
