@@ -4,7 +4,7 @@ const firebaseEndpoint = 'https://almost-broc-s-default-rtdb.firebaseio.com/';
 
 // TODO: GET BOOKS
 const getBooks = () => new Promise((resolve, reject) => {
-  fetch(`${firebaseEndpoint}/getBooks.json`, {
+  fetch(`${firebaseEndpoint}/books.json`, {
     method: 'GET',
     headers: {
       'content-Type': 'application/json',
