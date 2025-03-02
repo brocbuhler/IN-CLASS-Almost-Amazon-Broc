@@ -58,5 +58,6 @@ export {
   booksOnSale,
   deleteBook,
   getSingleBook,
-  updateBook
+  updateBook,
+  firebaseEndpoint
 };

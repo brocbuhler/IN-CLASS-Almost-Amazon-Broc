@@ -1,10 +1,31 @@
 // import client from '../utils/client';
 
 // const endpoint = client.databaseURL;
-
+const firebaseEndpoint = 'https://almost-broc-s-default-rtdb.firebaseio.com/';
 // FIXME:  GET ALL AUTHORS
-const getAuthors = () => {};
+const favoriteAuthors = () => new Promise((resolve, reject) => {
+  fetch(`${firebaseEndpoint}/authors.json?orderBy="favorite"&equalTo=true`, {
+    method: 'GET',
+    headers: {
+      'content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
 
+const getAuthors = () => new Promise((resolve, reject) => {
+  fetch(`${firebaseEndpoint}/authors.json`, {
+    method: 'GET',
+    headers: {
+      'content-Type': 'application/json',
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => resolve(Object.values(data)))
+    .catch(reject);
+});
 // FIXME: CREATE AUTHOR
 const createAuthor = () => {};
 
@@ -27,4 +48,5 @@ export {
   deleteSingleAuthor,
   updateAuthor,
   getAuthorBooks,
+  favoriteAuthors
 };
