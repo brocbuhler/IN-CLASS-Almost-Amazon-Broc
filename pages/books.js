@@ -22,8 +22,8 @@ const showBooks = (array) => {
             <p class="card-text bold">${item.sale ? `<span class="badge badge-info sale-badge"><i class="fa fa-bell" aria-hidden="true"></i> Sale</span> $${item.price}` : `$${item.price}`}</p>
             <hr>
             <i class="btn btn-success fas fa-eye" id="view-book-btn--${item.firebaseKey}"></i>
-            <i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info"></i>
-            <i id="delete-book-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt"></i>
+            <i id="edit-book-btn--${item.firebaseKey}" class="fas fa-edit btn btn-info">Edit</i>
+            <i id="delete-book-btn--${item.firebaseKey}" class="btn btn-danger fas fa-trash-alt">Delete</i>
         </div>
       </div>`;
   });
