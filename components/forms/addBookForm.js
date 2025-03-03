@@ -37,6 +37,6 @@ const addBookForm = (obj = {}) => {
   selectAuthor(`${obj.author_id || ''}`);
 };
 
-export default { addBookForm }; // updated formatting to match other files; still getting a warning (potentially ignore that) but fix it by removing "default" and adding multiple other functions/ function calls to this file. also make the importa match with curtly braces above (I didn't google if those are correct, just looked at the other files).
+export default addBookForm; // updated formatting to match other files; still getting a warning (potentially ignore that) but fix it by removing "default" and adding multiple other functions/ function calls to this file. also make the importa match with curtly braces above (I didn't google if those are correct, just looked at the other files).
 // error came back - beleive it can't find addBookForm now either because of the default export, or there's something wrong in the function.
 // tried removing the default export, no luck.  this linting error is silly.  Make sure all spelling and locations are correct after checking contents of the addbookform function.
