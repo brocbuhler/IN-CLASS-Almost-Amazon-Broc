@@ -3,9 +3,6 @@ import renderToDOM from '../utils/renderToDom';
 import { getAuthorBooks } from '../api/authorData';
 
 const showAuthorBooks = (array) => {
-  const btnString = '<button class="btn btn-success btn-lg mb-4" id="add-book-btn">Add A Book</button>';
-  renderToDOM('#add-button', btnString);
-
   let bomString = '';
   array.forEach((item) => {
     bomString += `
@@ -35,6 +32,7 @@ const viewAuthor = (obj) => {
   <button id="delete-author-btn--${obj.firebaseKey}"></button>
   </div>
   <div id="author-books"></div>`;
+  getAuthorBooks(console.warn);
   getAuthorBooks(obj.firebaseKey).then(showAuthorBooks);
 
   renderToDOM('#view', domString);
